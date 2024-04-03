@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='w-[100vw] h-[10vh] blur-b shadow-lg md:hidden flex justify-between items-center px-2'>
+      <div className='w-[100vw] h-[10vh] blur-b border-b border-primary/80 shadow-lg md:hidden flex justify-between items-center px-2'>
         <Link href={'/'} className='navbar-brand mt-0-imp z-50'>
           <NavbarBrand width={200} height={40} />
         </Link>
