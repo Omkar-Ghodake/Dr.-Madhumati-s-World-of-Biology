@@ -30,7 +30,7 @@ const Navbar = () => {
       </Link>
 
       <nav
-        className={`w-full h-full md:h-[12vh] flex flex-col md:flex-row md:justify-center items-center space-y-5 md:space-y-0 px-1 pb-10 md:pb-0 border-b nav-blur-bg ${
+        className={`w-full h-full md:h-[12vh] flex flex-col md:flex-row md:justify-center items-center space-y-5 md:space-y-0 px-1 pb-10 pt-7 md:py-0 border-b nav-blur-bg ${
           isNavbarOpen ? '-translate-y-0' : '-translate-y-[100vh]'
         } md:-translate-y-0 duration-300`}
       >
