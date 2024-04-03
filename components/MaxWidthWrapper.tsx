@@ -11,7 +11,7 @@ const MaxWidthWrapper = ({
   return (
     <div
       className={cn(
-        'max-width-[90vw] md:h-[88vh] md:max-w-[75vw] mx-auto',
+        'w-[90vw] h-[89vh] md:h-[88vh] md:max-w-[75vw] mx-auto',
         className
       )}
     >
