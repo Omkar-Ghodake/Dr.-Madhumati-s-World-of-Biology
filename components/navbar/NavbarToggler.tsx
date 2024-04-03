@@ -18,7 +18,7 @@ const NavbarToggler = ({
       <div
         className={`w-[22px] h-[1.5px] bg-black ${
           isNavbarOpen &&
-          'rotate-[45deg] w-[25px] h-[2px] translate-y-[6.29px] translate-x-[1px]'
+          'rotate-[46.5deg] w-[25px] h-[2px] translate-y-[6.29px] translate-x-[1px]'
         } duration-150`}
       ></div>
 
@@ -31,7 +31,7 @@ const NavbarToggler = ({
       <div
         className={`w-[22px] h-[1.5px] bg-black ${
           isNavbarOpen &&
-          '-rotate-[45deg] w-[25px] h-[2px] -translate-y-[6.29px] translate-x-[1px]'
+          '-rotate-[46.5deg] w-[25px] h-[2px] -translate-y-[6.29px] translate-x-[1px]'
         } duration-150`}
       ></div>
     </Button>
