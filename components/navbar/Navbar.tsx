@@ -47,7 +47,7 @@ const Navbar = () => {
 
       <nav
         className={`absolute left-0 md:static w-full h-full md:h-[12vh] flex flex-col md:flex-row md:justify-center items-center space-y-5 md:space-y-0 px-1 py-10 md:py-0 border-b nav-blur-bg ${
-          isNavbarOpen ? '-translate-y-0' : '-translate-y-[100vh]'
+          isNavbarOpen ? '-translate-y-0' : '-translate-y-[120vh]'
         } md:-translate-y-0 duration-300`}
         ref={navRef}
       >
