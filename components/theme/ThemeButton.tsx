@@ -11,7 +11,7 @@ const ThemeButton = () => {
   return (
     <Button
       size={'icon'}
-      className='fixed bottom-10 right-10 rounded-full shadow-lg'
+      className='fixed bottom-5 right-5 md:bottom-10 md:right-10 rounded-full shadow-lg'
       onClick={toggleTheme}
     >
       {theme === 'light' ? <Moon /> : <Sun />}
