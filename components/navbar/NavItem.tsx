@@ -11,7 +11,7 @@ const NavItem: NavItemType = ({ title, url }) => {
   return (
     <Link
       href={url}
-      className={`md:w-[10vw] text-center ${
+      className={`w-full md:w-[10vw] text-center ${
         pathname === url && 'font-semibold md:font-medium'
       }`}
     >
