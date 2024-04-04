@@ -1,8 +1,8 @@
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
+import LandingPageBanner from '@/public/landing_page_banner.png'
+import { Montserrat } from 'next/font/google'
 import Image from 'next/image'
-import { Montserrat, Raleway } from 'next/font/google'
 
-const raleway = Raleway({ subsets: ['latin'] })
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export default function Home() {
@@ -56,11 +56,12 @@ export default function Home() {
       <div className='right flex justify-center items-center w-full md:w-2/5 order-1 md:order-2 rounded-lg'>
         <div className='relative w-[12rem] md:w-[37rem] h-[12rem] md:h-[35rem] rounded-lg shadow-lg'>
           <Image
-            src={'/landing_page_banner.svg'}
+            src={LandingPageBanner}
             alt=''
             fill
             objectFit='cover'
             className='rounded-lg'
+            placeholder='blur'
           />
         </div>
       </div>

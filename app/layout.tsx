@@ -25,10 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={cn(montserrat.className)}>
+      <body className={cn(montserrat.className, 'overflow-x-hidden')}>
         <ThemeState>
           <Navbar />
-          {children}
+
+          <div className='mt-[8vh] md:mt-[12vh]'>{children}</div>
 
           <ThemeButton />
         </ThemeState>
