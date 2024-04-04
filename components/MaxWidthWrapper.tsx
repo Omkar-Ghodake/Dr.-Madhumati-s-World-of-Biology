@@ -11,7 +11,7 @@ const MaxWidthWrapper = ({
   return (
     <div
       className={cn(
-        'p-5 h-[89vh] md:h-[88vh] md:max-w-[75vw] mx-auto overflow-hidden',
+        'p-5 h-[89vh] md:h-[88vh] md:max-w-[75vw] mx-auto',
         className
       )}
     >
