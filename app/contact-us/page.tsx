@@ -19,9 +19,9 @@ const ContactUs = () => {
               <span>
                 <Phone className='' />
               </span>
-              <span>+91 123-456-7890</span>
+              <span>+91 72490 87518</span>
               <span className='w-[2px] h-[16px] bg-black'></span>
-              <span>+91 123-456-7890</span>
+              <span>+91 78410 87520</span>
             </div>
 
             <div className='contact-group flex items-center space-x-2 md:space-x-5'>

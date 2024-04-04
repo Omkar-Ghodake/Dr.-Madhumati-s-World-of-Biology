@@ -16,7 +16,7 @@ const ActiveNavbar = () => {
       ${pathname === '/gallery/photos' && 'md:left-[60vw] md:top-full'}
       ${pathname === '/gallery/videos' && 'md:left-[70vw] md:top-full'}
       ${pathname === '/testimonials' && 'md:left-[80vw] md:top-full'}
-      ${pathname === '/contact-us' && 'md:left-[90vw] md:top-full'}
+      ${pathname === '/contact-us' && 'md:left-[90vw] md:top-full '}
       `}
     ></div>
   )
