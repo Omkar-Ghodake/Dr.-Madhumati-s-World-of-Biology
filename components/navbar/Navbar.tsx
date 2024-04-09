@@ -11,12 +11,14 @@ import NavbarBrand from './NavbarBrand'
 import useOnClickOutside from '@/hooks/useOnClickOutside'
 import NavbarToggler from './NavbarToggler'
 import { usePathname } from 'next/navigation'
+import { useTheme } from '@/context/ThemeState'
 
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState<boolean>(false)
 
   const pathname = usePathname()
   const navRef = useRef(null)
+  const { theme } = useTheme()
 
   const toggleNavbar = () => {
     isNavbarOpen ? setIsNavbarOpen(false) : setIsNavbarOpen(true)
@@ -35,7 +37,7 @@ const Navbar = () => {
       <div className='fixed top-0 left-0 w-[100vw] h-[10vh] blur-bg border-b border-primary/80 shadow-lg md:hidden flex justify-end items-center px-2 z-50'>
         <Link
           href={'/'}
-          className='navbar-brand fixed top-1 left-2 mt-0-imp z-50 bg-white rounded-full border-b p-2 border-b-primary'
+          className={`navbar-brand fixed top-1 left-2 mt-0-imp z-50 bg-mono rounded-full border-b p-2 border-b-primary`}
         >
           <NavbarBrand width={80} height={80} />
         </Link>

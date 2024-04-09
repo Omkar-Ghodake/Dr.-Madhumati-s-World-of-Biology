@@ -32,6 +32,10 @@ const config = {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
         },
+        mono: {
+          DEFAULT: 'var(--mono)',
+          foreground: 'var(--mono-inv)',
+        },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
