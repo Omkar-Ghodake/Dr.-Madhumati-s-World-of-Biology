@@ -8,7 +8,7 @@ const montserrat = Montserrat({ subsets: ['latin'] })
 export default function Home() {
   return (
     <MaxWidthWrapper className='flex flex-col md:flex-row justify-between items-center'>
-      <div className='left w-full md:w-3/5 flex flex-col justify-center space-y-1 md:space-y-5 order-2 flex-1 md:order-1'>
+      <div className='left w-full md:w-[60%] flex flex-col justify-evenly space-y-1 md:space-y-5 order-2 flex-1 md:order-1 mt-5 md:mt-0'>
         <b className='text-3xl md:text-5xl text-slate-600'>
           <i>WELCOME TO</i>
         </b>
@@ -48,8 +48,8 @@ export default function Home() {
         </p>
       </div>
 
-      <div className='right flex justify-center items-center w-full md:w-2/5 order-1 md:order-2 rounded-lg'>
-        <div className='relative w-[12rem] md:w-[37rem] h-[12rem] md:h-[35rem] rounded-lg shadow-lg'>
+      <div className='md:right flex justify-center items-center w-full md:w-[40%] order-1 md:order-2 rounded-lg mt-5 md:mt-0'>
+        <div className='relative w-[12rem] md:w-[37rem] h-[12rem] md:h-[30rem] rounded-lg shadow-lg'>
           <Image
             src={LandingPageBanner}
             alt=''

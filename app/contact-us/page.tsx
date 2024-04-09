@@ -7,9 +7,9 @@ import Link from 'next/link'
 
 const ContactUs = () => {
   return (
-    <MaxWidthWrapper className='md:overflow-y-hidden'>
+    <MaxWidthWrapper className='md:overflow-y-hidden md:max-w-[80vw]'>
       <div className='flex flex-col md:flex-row items-center h-full md:space-x-10 space-y-10 md:space-y-0'>
-        <div className='flex flex-col justify-between space-y-5 w-full md:w-1/2 h-full pb-3'>
+        <div className='flex flex-col justify-between space-y-5 w-full md:w-1/2 h-full pb-3 mt-2 md:mt-0'>
           <h1 className='text-2xl font-medium'>Having Questions?</h1>
 
           <div className='flex flex-col space-y-4'>
@@ -77,7 +77,9 @@ const ContactUs = () => {
         </div>
 
         <div className='flex flex-col justify-center space-y-5 w-full md:w-1/2 h-full pb-3 '>
-          <h1 className='text-2xl font-medium'>Send Us a Message</h1>
+          <h1 className='text-2xl font-medium text-center'>
+            Send Us a Message
+          </h1>
 
           <div className='h-full'>
             <ContactForm />

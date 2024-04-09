@@ -1,26 +1,24 @@
-'use client'
-
-import { useTheme } from '@/context/ThemeState'
+import { cn } from '@/lib/utils'
 import Image from 'next/image'
 
 const NavbarBrand = ({
   width,
   height,
+  className,
 }: {
   width?: number
   height?: number
+  className?: string
 }) => {
-  const { theme } = useTheme()
-
   return (
     <>
       <Image
-        src={'/logo_horiz_light.png'}
+        src={'/logo.jpg'}
         alt=''
         width={width}
         height={height}
         fill={!width || !height}
-        className={`${theme === 'light' && 'invert'} z-50`}
+        className={cn('bg-white rounded-full', className)}
       />
     </>
   )
