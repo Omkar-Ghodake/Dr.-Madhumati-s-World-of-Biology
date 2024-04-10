@@ -1,5 +1,7 @@
-import { NavItemProps, NavListProps } from './propTypes'
+import { JrCollegeBatchProps, NavItemProps, NavListProps } from './propTypes'
 
-export type NavItemType = ({ title, url }: NavItemProps) => React.JSX.Element
+export type NavItemType = ({}: NavItemProps) => React.JSX.Element
 
-export type NavListType = ({ navLinksArray }: NavListProps) => React.JSX.Element
+export type NavListType = ({}: NavListProps) => React.JSX.Element
+
+export type BatchInfoType = ({}: JrCollegeBatchProps) => React.JSX.Element

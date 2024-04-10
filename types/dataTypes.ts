@@ -1,4 +1,5 @@
 import React from 'react'
+import { JrCollegeBatchProps } from './propTypes'
 
 export type NavLinks = {
   title: string
@@ -13,3 +14,5 @@ export type ThemeContextType = {
 } | null
 
 export type SelectedWeProvideMenuType = 0 | 1 | 2
+
+export type JrCollegeBatchInfo = JrCollegeBatchProps
