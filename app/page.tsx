@@ -1,13 +1,15 @@
+import LandingPageBanner from '@/components/home/LandingPageBanner'
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
-import LandingPageBanner from '@/public/landing_page_banner.png'
 import { Montserrat } from 'next/font/google'
-import Image from 'next/image'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <MaxWidthWrapper className='flex flex-col md:flex-row justify-between items-center'>
+    <MaxWidthWrapper
+      className='flex flex-col md:flex-row justify-between items-center'
+      heightPage
+    >
       <div className='left w-full md:w-[60%] flex flex-col justify-evenly space-y-1 md:space-y-5 order-2 flex-1 md:order-1 mt-5 md:mt-0'>
         <b className='text-3xl md:text-5xl text-slate-600'>
           <i>WELCOME TO</i>
@@ -47,19 +49,7 @@ export default function Home() {
           .
         </p>
       </div>
-
-      <div className='md:right flex justify-center items-center w-full md:w-[40%] order-1 md:order-2 rounded-lg mt-5 md:mt-0'>
-        <div className='relative w-[12rem] md:w-[37rem] h-[12rem] md:h-[30rem] rounded-lg shadow-lg'>
-          <Image
-            src={LandingPageBanner}
-            alt=''
-            fill
-            objectFit='cover'
-            className='rounded-lg'
-            placeholder='blur'
-          />
-        </div>
-      </div>
+      <LandingPageBanner />
     </MaxWidthWrapper>
   )
 }

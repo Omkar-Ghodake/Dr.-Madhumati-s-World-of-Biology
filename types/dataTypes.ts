@@ -11,3 +11,5 @@ export type ThemeContextType = {
   theme: ThemeType
   toggleTheme: () => void
 } | null
+
+export type SelectedWeProvideMenuType = 0 | 1 | 2

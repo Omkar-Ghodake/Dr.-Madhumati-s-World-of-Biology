@@ -1,7 +1,11 @@
-import React from 'react'
+import SelectOptions from '@/components/weProvide/SelectOptions'
 
 const WeProvide = () => {
-  return <div>WeProvide</div>
+  return (
+    <>
+      <SelectOptions />
+    </>
+  )
 }
 
 export default WeProvide

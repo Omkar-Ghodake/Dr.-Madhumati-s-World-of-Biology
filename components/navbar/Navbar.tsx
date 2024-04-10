@@ -12,6 +12,7 @@ import useOnClickOutside from '@/hooks/useOnClickOutside'
 import NavbarToggler from './NavbarToggler'
 import { usePathname } from 'next/navigation'
 import { useTheme } from '@/context/ThemeState'
+import { motion } from 'framer-motion'
 
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState<boolean>(false)
@@ -50,8 +51,37 @@ const Navbar = () => {
         </div>
       </div>
 
+      <motion.nav
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.02, type: 'spring' }}
+        className={`absolute hidden left-0 md:fixed md:left-0 md:top-0 w-full h-fit md:h-[12vh] md:flex md:flex-row md:justify-center items-center space-y-5 md:space-y-0 px-1 py-5 md:py-0 border-b nav-blur-bg ${
+          isNavbarOpen ? '-translate-y-0' : '-translate-y-[120vh]'
+        } md:-translate-y-0 duration-300 z-40`}
+        ref={navRef}
+      >
+        <div className='left-navlinks md:w-[40vw] flex flex-col md:flex-row items-center justify-center text-lg md:mt-0 md:mr-[20vw]'>
+          <NavList navLinksArray={NAVLINKS_LEFT} />
+        </div>
+
+        <div className='hidden md:block fixed top-0 w-36 h-36 bg-white p-2 rounded-full shadow-xl'>
+          <Link
+            href={'/'}
+            className='hidden md:block md:navbar-brand relative w-32 h-32 rounded-full'
+          >
+            <NavbarBrand />
+          </Link>
+        </div>
+
+        <div className='right-navlinks md:w-[40vw] flex flex-col md:flex-row items-center justify-center text-lg'>
+          <NavList navLinksArray={NAVLINKS_RIGHT} />
+        </div>
+
+        <ActiveNavbar />
+      </motion.nav>
+
       <nav
-        className={`absolute left-0 md:fixed md:left-0 md:top-0 w-full h-fit md:h-[12vh] flex flex-col md:flex-row md:justify-center items-center space-y-5 md:space-y-0 px-1 py-5 md:py-0 border-b nav-blur-bg ${
+        className={`absolute md:hidden left-0 md:fixed md:left-0 md:top-0 w-full h-fit md:h-[12vh] flex flex-col md:flex-row md:justify-center items-center space-y-5 md:space-y-0 px-1 py-5 md:py-0 border-b nav-blur-bg ${
           isNavbarOpen ? '-translate-y-0' : '-translate-y-[120vh]'
         } md:-translate-y-0 duration-300 z-40`}
         ref={navRef}
