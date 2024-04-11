@@ -9,16 +9,18 @@ import {
 } from '@/components/ui/card'
 import { Clock } from 'lucide-react'
 import { BatchInfoType } from '@/types/componentTypes'
+import { cn } from '@/lib/utils'
 
-const BatchInfo: BatchInfoType = ({
+const JrCollegeBatchInfo: BatchInfoType = ({
   cardTitle,
   cardDesc,
   eduBoards,
   eduSubjects,
   timings,
+  className,
 }) => {
   return (
-    <Card className='w-full md:w-1/2 shadow-lg'>
+    <Card className={cn('shadow-lg', className)}>
       <CardHeader>
         <CardTitle>{cardTitle}</CardTitle>
         <CardDescription className='md:text-base'>{cardDesc}</CardDescription>
@@ -58,4 +60,4 @@ const BatchInfo: BatchInfoType = ({
   )
 }
 
-export default BatchInfo
+export default JrCollegeBatchInfo
