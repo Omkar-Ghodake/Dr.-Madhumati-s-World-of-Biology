@@ -27,7 +27,7 @@ const BatchInfo: BatchInfoType = ({
       <CardContent className='flex items-start space-x-5'>
         <div className='w-1/2 h-36 md:h-[17vh] bg-secondary p-2 md:p-5 rounded-lg'>
           <strong>Boards</strong>
-          <ul>
+          <ul className=''>
             {eduBoards.map((item) => (
               <li key={item}>{item}</li>
             ))}

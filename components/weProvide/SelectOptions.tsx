@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 
 const SelectOptions = () => {
   const [selectedWeProvideMenu, setSelectedWeProvideMenu] =
-    useState<SelectedWeProvideMenuType>(0)
+    useState<SelectedWeProvideMenuType>(1)
 
   return (
     <MaxWidthWrapper
