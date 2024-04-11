@@ -14,7 +14,7 @@ const WeProvideMenu = ({
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className={`h-full w-fit flex shadow-xl rounded-lg overflow-x-hidden duration-200 
+        className={`md:h-full w-fit flex shadow-xl rounded-lg overflow-x-hidden duration-200 
         ${selectedWeProvideMenu === 0 && 'translate-x-0'} 
         ${
           selectedWeProvideMenu === 1 &&
@@ -25,7 +25,7 @@ const WeProvideMenu = ({
           '-translate-x-[180vw] md:-translate-x-[150vw]'
         }`}
       >
-        <div className='menu-0 h-full md:p-5 w-[90vw] md:w-[75vw] flex flex-col md:flex-row justify-between space-y-5 md:space-y-0 md:space-x-5'>
+        <div className='menu-0 h-full md:p-5 w-[90vw] md:w-[75vw] flex flex-col md:flex-row justify-start md:justify-between space-y-5 md:space-y-0 md:space-x-5'>
           {JR_COLLEGE_BATCH_INFO.map((item) => (
             <JrCollegeBatchInfo
               key={item.cardTitle}
@@ -47,7 +47,7 @@ const WeProvideMenu = ({
               programHighlights={item.programHighlights}
               batches={item.batches}
               timings={item.timings}
-              className='w-1/2'
+              className='w-full md:w-1/2'
             />
           ))}
         </div>

@@ -20,7 +20,7 @@ const NeetBatchInfo: NeetBatchInfoType = ({
   className,
 }) => {
   return (
-    <Card className={cn('shadow-lg', className)}>
+    <Card className={cn('shadow-md md:shadow-lg', className)}>
       <CardHeader>
         <CardTitle>{cardTitle}</CardTitle>
         <CardDescription className='md:text-base'>{cardDesc}</CardDescription>
@@ -42,7 +42,7 @@ const NeetBatchInfo: NeetBatchInfoType = ({
             <div key={item.title} className='w-1/2 flex flex-col space-y-5'>
               <strong>{item.title}</strong>
 
-              <div className='w-full h-36 md:h-fit bg-secondary p-2 md:p-5 rounded-lg'>
+              <div className='w-full h-48 md:h-fit bg-secondary p-2 md:p-5 rounded-lg'>
                 <strong>Boards</strong>
                 <ul className=''>
                   {item.eduBoards.map((item) => (
