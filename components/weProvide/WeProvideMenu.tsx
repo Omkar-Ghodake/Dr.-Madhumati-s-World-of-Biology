@@ -40,7 +40,7 @@ const WeProvideMenu = ({
               cardTitle={item.cardTitle}
               cardDesc={item.cardDesc}
               eduBoards={item.eduBoards}
-              eduSubjects={item.eduBoards}
+              eduSubjects={item.eduSubjects}
               timings={item.timings}
             />
           ))}
