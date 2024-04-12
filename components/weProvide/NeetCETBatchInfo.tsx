@@ -8,10 +8,10 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
-import { NeetBatchInfoType } from '@/types/componentTypes'
+import { NeetCETBatchInfoType } from '@/types/componentTypes'
 import { Clock, Dot } from 'lucide-react'
 
-const NeetBatchInfo: NeetBatchInfoType = ({
+const NeetCETBatchInfo: NeetCETBatchInfoType = ({
   cardTitle,
   cardDesc,
   programHighlights,
@@ -39,10 +39,10 @@ const NeetBatchInfo: NeetBatchInfoType = ({
 
         {batches &&
           batches.map((item) => (
-            <div key={item.title} className='w-1/2 flex flex-col space-y-5'>
+            <div key={item.title} className='w-1/2 flex flex-col md:space-y-5'>
               <strong>{item.title}</strong>
 
-              <div className='w-full h-48 md:h-fit bg-secondary p-2 md:p-5 rounded-lg'>
+              <div className='w-full h-fit bg-secondary p-2 md:p-5 rounded-lg'>
                 <strong>Boards</strong>
                 <ul className=''>
                   {item.eduBoards.map((item) => (
@@ -50,33 +50,31 @@ const NeetBatchInfo: NeetBatchInfoType = ({
                   ))}
                 </ul>
 
-                <strong>Subject(s)</strong>
+                {/* <strong>Subject(s)</strong>
                 <ul>
                   {item.eduSubjects.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
-                </ul>
+                </ul> */}
               </div>
             </div>
           ))}
       </CardContent>
 
-      <CardFooter>
-        {timings && (
-          <>
-            <strong className='flex justify-center items-center space-x-2'>
-              <span>
-                <Clock />
-              </span>
-              <span>Timings</span>
-              <span>:</span>
-            </strong>
-            <p>&nbsp;{timings}</p>
-          </>
-        )}
-      </CardFooter>
+      {timings && (
+        <CardFooter className=''>
+          <strong className='flex justify-center items-center space-x-2'>
+            <span>
+              <Clock />
+            </span>
+            <span>Timings</span>
+            <span>:</span>
+          </strong>
+          <p>&nbsp;{timings}</p>
+        </CardFooter>
+      )}
     </Card>
   )
 }
 
-export default NeetBatchInfo
+export default NeetCETBatchInfo

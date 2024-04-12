@@ -1,4 +1,4 @@
-import { NavLinks, NeetBatchProps_batches } from './dataTypes'
+import { NavLinks, NeetCETBatchInfoProps_batches } from './dataTypes'
 
 export type NavItemProps = NavLinks
 
@@ -13,11 +13,11 @@ export type JrCollegeBatchProps = {
   className?: string
 }
 
-export type NeetBatchProps = {
+export type NeetCETBatchInfoProps = {
   cardTitle: string
   cardDesc: string
   programHighlights?: string[]
-  batches?: NeetBatchProps_batches[]
+  batches?: NeetCETBatchInfoProps_batches[]
   className?: string
   timings?: string
 }

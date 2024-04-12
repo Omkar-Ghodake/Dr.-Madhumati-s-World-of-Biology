@@ -1,4 +1,4 @@
-import { JrCollegeBatchInfo, NeetBatchInfo } from '@/types/dataTypes'
+import { JrCollegeBatchInfo, NeetCETBatchInfoInfo } from '@/types/dataTypes'
 
 export const JR_COLLEGE_BATCH_INFO: JrCollegeBatchInfo[] = [
   {
@@ -19,7 +19,7 @@ export const JR_COLLEGE_BATCH_INFO: JrCollegeBatchInfo[] = [
   },
 ]
 
-export const NEET_BATCH_INFO: NeetBatchInfo[] = [
+export const NEET_BATCH_INFO: NeetCETBatchInfoInfo[] = [
   {
     cardTitle: 'About the Course',
     cardDesc:
@@ -44,6 +44,37 @@ export const NEET_BATCH_INFO: NeetBatchInfo[] = [
       },
       {
         title: 'NEET Repeat',
+        eduBoards: ['MH State Board', 'CBSE', 'NCERT'],
+        eduSubjects: ['Biology'],
+      },
+    ],
+  },
+]
+
+export const MHT_CET_BATCH_INFO: NeetCETBatchInfoInfo[] = [
+  {
+    cardTitle: 'About the Course',
+    cardDesc:
+      'Get ready for the MHT-CET exam with our specialized biology coaching program. We cover essential topics, problem-solving techniques, and provide regular assessments for tracking progress. Our experienced faculty offers personalized guidance and a range of study resources.',
+    programHighlights: [
+      'Tailored coaching for MHT-CET exam preparation.',
+      'Comprehensive coverage of biology topics relevant to the exam.',
+      'Emphasis on understanding and applying concepts effectively.',
+      'Regular practice tests and personalized support for optimal preparation.',
+    ],
+  },
+  {
+    cardTitle: 'Batches',
+    cardDesc: '',
+    timings: 'Two Hours',
+    batches: [
+      {
+        title: 'CET Regular',
+        eduBoards: ['MH State Board', 'CBSE', 'NCERT'],
+        eduSubjects: ['Biology'],
+      },
+      {
+        title: 'CET Repeat',
         eduBoards: ['MH State Board', 'CBSE', 'NCERT'],
         eduSubjects: ['Biology'],
       },

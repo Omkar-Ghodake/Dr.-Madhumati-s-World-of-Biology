@@ -1,8 +1,12 @@
-import { JR_COLLEGE_BATCH_INFO, NEET_BATCH_INFO } from '@/data/batchInfoData'
+import {
+  JR_COLLEGE_BATCH_INFO,
+  MHT_CET_BATCH_INFO,
+  NEET_BATCH_INFO,
+} from '@/data/batchInfoData'
 import { SelectedWeProvideMenuType } from '@/types/dataTypes'
 import { motion } from 'framer-motion'
 import JrCollegeBatchInfo from './JrCollegeBatchInfo'
-import NeetBatchInfo from './NeetBatchInfo'
+import NeetCETBatchInfo from './NeetCETBatchInfo'
 
 const WeProvideMenu = ({
   selectedWeProvideMenu,
@@ -40,7 +44,7 @@ const WeProvideMenu = ({
 
         <div className='menu-1 h-full md:p-5 w-[90vw] md:w-[75vw] flex flex-col md:flex-row justify-between space-y-5 md:space-y-0 md:space-x-5'>
           {NEET_BATCH_INFO.map((item) => (
-            <NeetBatchInfo
+            <NeetCETBatchInfo
               key={item.cardTitle}
               cardTitle={item.cardTitle}
               cardDesc={item.cardDesc}
@@ -53,14 +57,15 @@ const WeProvideMenu = ({
         </div>
 
         <div className='menu-2 h-full md:p-5 w-[90vw] md:w-[75vw] flex flex-col md:flex-row justify-between space-y-5 md:space-y-0 md:space-x-5'>
-          {JR_COLLEGE_BATCH_INFO.map((item) => (
-            <JrCollegeBatchInfo
+          {MHT_CET_BATCH_INFO.map((item) => (
+            <NeetCETBatchInfo
               key={item.cardTitle}
               cardTitle={item.cardTitle}
               cardDesc={item.cardDesc}
-              eduBoards={item.eduBoards}
-              eduSubjects={item.eduSubjects}
+              programHighlights={item.programHighlights}
+              batches={item.batches}
               timings={item.timings}
+              className='w-full md:w-1/2'
             />
           ))}
         </div>
