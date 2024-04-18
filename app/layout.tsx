@@ -1,6 +1,6 @@
 import Navbar from '@/components/navbar/Navbar'
 import ThemeButton from '@/components/theme/ThemeButton'
-import ThemeState from '@/context/ThemeState'
+import ThemeProvider from '@/context/ThemeProvider'
 import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
@@ -26,13 +26,13 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={cn(montserrat.className, 'overflow-x-hidden')}>
-        <ThemeState>
+        <ThemeProvider>
           <Navbar />
 
           <div className='mt-[8vh] md:mt-[12vh]'>{children}</div>
 
           <ThemeButton />
-        </ThemeState>
+        </ThemeProvider>
       </body>
     </html>
   )

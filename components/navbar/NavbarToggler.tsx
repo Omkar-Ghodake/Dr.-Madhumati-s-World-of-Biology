@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Button } from '../ui/button'
-import { useTheme } from '@/context/ThemeState'
+import { useTheme } from '@/context/ThemeProvider'
 
 const NavbarToggler = ({
   isNavbarOpen,

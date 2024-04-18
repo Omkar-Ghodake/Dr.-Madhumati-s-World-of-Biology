@@ -5,7 +5,7 @@ import React, { createContext, ReactNode, useContext, useState } from 'react'
 
 const ThemeContext = createContext<ThemeContextType>(null)
 
-const ThemeState = ({ children }: { children: ReactNode }) => {
+const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useState<ThemeType>('light')
 
   const toggleTheme = () => {
@@ -33,5 +33,17 @@ const useTheme = () => {
   throw new Error('Use useTheme inside ThemeContext Provider.')
 }
 
-export default ThemeState
+export default ThemeProvider
 export { ThemeContext, useTheme }
+
+// 'use client'
+
+// import * as React from 'react'
+// import { ThemeProvider as NextThemesProvider } from 'next-themes'
+// import { type ThemeProviderProps } from 'next-themes/dist/types'
+
+// const ThemeProvider = ({ children, ...props }: ThemeProviderProps) => {
+//   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+// }
+
+// export default ThemeProvider

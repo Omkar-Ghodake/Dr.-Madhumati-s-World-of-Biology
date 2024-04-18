@@ -1,18 +1,16 @@
 'use client'
 
+import { useTheme } from '@/context/ThemeProvider'
 import { NAVLINKS_LEFT, NAVLINKS_RIGHT } from '@/data/navlinks'
-import { Menu, X } from 'lucide-react'
+import useOnClickOutside from '@/hooks/useOnClickOutside'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
-import { Button } from '../ui/button'
 import ActiveNavbar from './ActiveNavbar'
 import NavList from './NavList'
 import NavbarBrand from './NavbarBrand'
-import useOnClickOutside from '@/hooks/useOnClickOutside'
 import NavbarToggler from './NavbarToggler'
-import { usePathname } from 'next/navigation'
-import { useTheme } from '@/context/ThemeState'
-import { motion } from 'framer-motion'
 
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState<boolean>(false)

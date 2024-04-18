@@ -1,12 +1,27 @@
 'use client'
 
-import { useTheme } from '@/context/ThemeState'
+import { ThemeType } from '@/types/dataTypes'
 import { Moon, Sun } from 'lucide-react'
-import React from 'react'
 import { Button } from '../ui/button'
+import { useTheme } from '@/context/ThemeProvider'
 
 const ThemeButton = () => {
   const { theme, toggleTheme } = useTheme()
+
+  // const toggleTheme = () => {
+  //   theme === 'light' ? setTheme('dark') : setTheme('light')
+  //   console.log('🚀 ~ toggleTheme ~ theme:', theme)
+  // }
+
+  // const changeTheme = (theme: ThemeType) => {
+  //   setTheme(theme)
+  //   if (theme === 'light') {
+  //     document.body.classList.remove('dark')
+  //   } else {
+  //     document.body.classList.add('dark')
+  //   }
+  //   console.log('🚀 ~ changeTheme ~ theme:', theme)
+  // }
 
   return (
     <Button
