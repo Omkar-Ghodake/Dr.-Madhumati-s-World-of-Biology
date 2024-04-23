@@ -19,13 +19,14 @@ const WeProvideMenu = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className={`md:h-full w-fit flex shadow-xl rounded-lg overflow-x-hidden duration-200 
-        ${selectedWeProvideMenu === 0 && 'translate-x-[75vw]'} 
         ${
-          selectedWeProvideMenu === 1 && '-translate-x-[90vw] md:translate-x-0'
+          selectedWeProvideMenu === 0 &&
+          'translate-x-[90vw] md:translate-x-[75vw]'
         } 
+        ${selectedWeProvideMenu === 1 && '-translate-x-0 md:translate-x-0'} 
         ${
           selectedWeProvideMenu === 2 &&
-          '-translate-x-[180vw] md:-translate-x-[75vw]'
+          '-translate-x-[90vw] md:-translate-x-[75vw]'
         }`}
       >
         <div className='menu-0 h-full md:p-5 w-[90vw] md:w-[75vw] flex flex-col md:flex-row justify-start md:justify-between space-y-5 md:space-y-0 md:space-x-5'>
