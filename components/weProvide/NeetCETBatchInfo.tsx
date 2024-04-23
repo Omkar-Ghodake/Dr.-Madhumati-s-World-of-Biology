@@ -20,21 +20,23 @@ const NeetCETBatchInfo: NeetCETBatchInfoType = ({
   className,
 }) => {
   return (
-    <Card className={cn('shadow-md md:shadow-lg', className)}>
-      <CardHeader>
+    <Card className={cn('shadow-md md:shadow-lg md:min-h-96 h-fit', className)}>
+      <CardHeader className='pb-2'>
         <CardTitle>{cardTitle}</CardTitle>
         <CardDescription className='md:text-base'>{cardDesc}</CardDescription>
       </CardHeader>
 
       <CardContent className='flex items-start space-x-5'>
         {programHighlights && (
-          <ul className='list-disc'>
-            {programHighlights.map((item) => (
-              <li key={item} className='flex justify-start space-x-2'>
-                <span className='animate-pulse'>●</span> <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          <div className='overflow-y-auto h-full md:h-32 custom-scrollbar scrollbar-sm'>
+            <ul className='list-disc'>
+              {programHighlights.map((item) => (
+                <li key={item} className='flex justify-start space-x-2'>
+                  <span className='animate-pulse'>●</span> <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
 
         {batches &&

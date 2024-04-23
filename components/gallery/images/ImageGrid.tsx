@@ -7,15 +7,18 @@ import { useState } from 'react'
 const ImageGrid = ({ title, src }: { title: string; src: StaticImageData }) => {
   const [selectedImage, setSelectedImage] = useState('')
 
-  const changeSelectedImage = () => {
+  const changeSelectedImage = (title: string) => {
     setSelectedImage(title)
+    console.log('🚀 ~ ImageGrid ~ selectedImage:', title, selectedImage)
   }
 
   return (
     <div
       key={title}
       className={`img-box bg-secondary rounded-md cursor-pointer hover:opacity-70 duration-100`}
-      onClick={changeSelectedImage}
+      onClick={() => {
+        changeSelectedImage(title)
+      }}
     >
       <AspectRatio ratio={16 / 9} className='img-box'>
         <Image

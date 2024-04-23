@@ -69,7 +69,7 @@ const SelectOptions = () => {
         <motion.div
           initial={{ opacity: 0, y: 300 }}
           animate={{ opacity: 1, y: 0 }}
-          className='overflow-x-hidden h-full w-[90vw] md:w-[75vw] pt-5 rounded-lg'
+          className='overflow-x-hidden h-full flex flex-col justify-center items-center w-[90vw] md:w-[75vw] pt-5 rounded-lg'
         >
           <WeProvideMenu selectedWeProvideMenu={selectedWeProvideMenu} />
         </motion.div>

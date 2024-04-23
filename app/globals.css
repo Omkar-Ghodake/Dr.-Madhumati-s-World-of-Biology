@@ -81,3 +81,29 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  /* width */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .scrollbar-sm::-webkit-scrollbar {
+    width: 5px !important;
+  }
+
+  /* Track */
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-secondary rounded-full;
+  }
+
+  /* Handle */
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-secondary-foreground/70 rounded-full;
+  }
+
+  /* Handle on hover */
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-secondary-foreground/45;
+  }
+}
