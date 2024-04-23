@@ -21,7 +21,7 @@ const NeetCETBatchInfo: NeetCETBatchInfoType = ({
 }) => {
   return (
     <Card className={cn('shadow-md md:shadow-lg md:min-h-96 h-fit', className)}>
-      <CardHeader className='pb-2'>
+      <CardHeader className=''>
         <CardTitle>{cardTitle}</CardTitle>
         <CardDescription className='md:text-base'>{cardDesc}</CardDescription>
       </CardHeader>
