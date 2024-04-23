@@ -21,14 +21,14 @@ const NeetCETBatchInfo: NeetCETBatchInfoType = ({
 }) => {
   return (
     <Card className={cn('shadow-md md:shadow-lg md:min-h-96 h-fit', className)}>
-      <CardHeader className=''>
+      <CardHeader className='pb-3'>
         <CardTitle>{cardTitle}</CardTitle>
         <CardDescription className='md:text-base'>{cardDesc}</CardDescription>
       </CardHeader>
 
       <CardContent className='flex items-start space-x-5'>
         {programHighlights && (
-          <div className='overflow-y-auto h-full md:h-32 custom-scrollbar scrollbar-sm'>
+          <div className='overflow-y-auto h-full md:h-36 custom-scrollbar scrollbar-sm'>
             <ul className='list-disc'>
               {programHighlights.map((item) => (
                 <li key={item} className='flex justify-start space-x-2'>
