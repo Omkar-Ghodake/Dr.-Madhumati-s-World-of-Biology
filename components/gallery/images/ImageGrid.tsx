@@ -1,34 +1,65 @@
 'use client'
 
-import { AspectRatio } from '@/components/ui/aspect-ratio'
+import { X } from 'lucide-react'
 import Image, { StaticImageData } from 'next/image'
-import { useState } from 'react'
+import { Dispatch, SetStateAction } from 'react'
 
-const ImageGrid = ({ title, src }: { title: string; src: StaticImageData }) => {
-  const [selectedImage, setSelectedImage] = useState('')
-
-  const changeSelectedImage = (title: string) => {
-    setSelectedImage(title)
-    console.log('🚀 ~ ImageGrid ~ selectedImage:', title, selectedImage)
-  }
-
+const ImageGrid = ({
+  title,
+  src,
+  selectedImage,
+  setSelectedImage,
+}: {
+  title: string
+  src: StaticImageData
+  selectedImage: string | null
+  setSelectedImage: Dispatch<SetStateAction<string | null>>
+}) => {
   return (
-    <div
-      key={title}
-      className={`img-box bg-secondary rounded-md cursor-pointer hover:opacity-70 duration-100`}
-      onClick={() => {
-        changeSelectedImage(title)
-      }}
-    >
-      <AspectRatio ratio={16 / 9} className='img-box'>
-        <Image
-          src={src}
-          alt={title}
-          className='rounded-md object-contain'
-          fill
-        />
-      </AspectRatio>
-    </div>
+    <>
+      <div
+        className={`ext ${
+          selectedImage === title &&
+          'w-[100vw] h-[100vh] bg-black/80 absolute inset-0 flex justify-center items-center z-50'
+        }`}
+      >
+        <div
+          key={title}
+          className={`relative img-box rounded-xl cursor-pointer duration-300 ${
+            selectedImage === title
+              ? 'scale-150 z-50 w-1/2 h-1/2 flex justify-center items-center overflow-hidden p-10'
+              : 'h-64 group'
+          }`}
+          onClick={() => {
+            !selectedImage && setSelectedImage(title)
+            console.log('🚀 ~ selectedImage in title:', selectedImage)
+          }}
+        >
+          {selectedImage === title && (
+            <div
+              className='absolute right-0 top-0 text-white z-50 scale-75 hover:scale-100 duration-150'
+              onClick={() => {
+                setSelectedImage(null)
+                console.log('🚀 ~ selectedImage:', selectedImage)
+              }}
+            >
+              <X />
+            </div>
+          )}
+
+          <Image
+            src={src}
+            alt={title}
+            className={`rounded-md ${
+              selectedImage ? 'object-contain' : 'object-cover'
+            } overflow-hidden group-hover:opacity-75`}
+            // sizes='128px'
+            placeholder='blur'
+            fill
+          />
+        </div>
+      </div>
+    </>
   )
 }
 
