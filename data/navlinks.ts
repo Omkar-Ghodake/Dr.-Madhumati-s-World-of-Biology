@@ -21,7 +21,7 @@ export const NAVLINKS_LEFT: NavLinks[] = [
 
 export const NAVLINKS_RIGHT: NavLinks[] = [
   {
-    title: 'Gallery',
+    title: 'Images',
     url: '/gallery/photos',
   },
   {
