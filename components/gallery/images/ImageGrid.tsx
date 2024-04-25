@@ -1,6 +1,5 @@
 'use client'
 
-import { X } from 'lucide-react'
 import Image, { StaticImageData } from 'next/image'
 import { Dispatch, SetStateAction } from 'react'
 
@@ -12,12 +11,20 @@ const ImageGrid = ({
 }: {
   title: string
   src: StaticImageData
-  selectedImage: string | null
-  setSelectedImage: Dispatch<SetStateAction<string | null>>
+  selectedImage: {
+    src: StaticImageData | null
+    imgTitle: string | null
+  }
+  setSelectedImage: Dispatch<
+    SetStateAction<{
+      src: StaticImageData | null
+      imgTitle: string | null
+    }>
+  >
 }) => {
   return (
     <>
-      <div
+      {/* <div
         className={`ext ${
           selectedImage === title &&
           'w-[100vw] h-[100vh] bg-black/80 absolute inset-0 flex justify-center items-center z-50'
@@ -27,7 +34,7 @@ const ImageGrid = ({
           key={title}
           className={`relative img-box rounded-xl cursor-pointer duration-300 ${
             selectedImage === title
-              ? 'scale-150 z-50 w-1/2 h-1/2 flex justify-center items-center overflow-hidden p-10'
+              ? 'scale-[2] md:scale-150 z-50 md:w-1/2 md:h-1/2 flex justify-center items-center overflow-hidden md:p-10'
               : 'h-64 group'
           }`}
           onClick={() => {
@@ -58,6 +65,23 @@ const ImageGrid = ({
             fill
           />
         </div>
+      </div> */}
+
+      <div
+        key={title}
+        className={`relative img-box rounded-xl cursor-pointer duration-300 h-64 group`}
+        onClick={() => {
+          !selectedImage.src && setSelectedImage({ src: src, imgTitle: title })
+        }}
+      >
+        <Image
+          src={src}
+          alt={title}
+          className={`rounded-md object-cover overflow-hidden group-hover:opacity-75`}
+          // sizes='128px'
+          placeholder='blur'
+          fill
+        />
       </div>
     </>
   )
