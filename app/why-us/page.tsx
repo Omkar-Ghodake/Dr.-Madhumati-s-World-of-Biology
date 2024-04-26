@@ -1,11 +1,16 @@
-import HeadLine from '@/components/whyUs/HeadLine'
+import InfographicSection from '@/components/whyUs/InfographicSection'
+import LandingSection from '@/components/whyUs/LandingSection'
 import React from 'react'
 
 const WhyUs = () => {
   return (
     <div>
+      <div className=''>
+        <LandingSection />
+      </div>
+
       <div>
-        <HeadLine />
+        <InfographicSection />
       </div>
     </div>
   )

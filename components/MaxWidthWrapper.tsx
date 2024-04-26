@@ -4,11 +4,13 @@ import React, { ReactNode } from 'react'
 const MaxWidthWrapper = ({
   children,
   className,
+  id,
   heightPage,
   heightSmPage,
 }: {
   children: ReactNode
   className?: string
+  id?: string
   heightPage?: boolean
   heightSmPage?: boolean
 }) => {
@@ -21,6 +23,7 @@ const MaxWidthWrapper = ({
         }`,
         className
       )}
+      id={id}
     >
       {children}
     </div>
