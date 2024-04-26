@@ -45,7 +45,7 @@ const LandingSection = () => {
         >
           <p className='text-lg md:text-2xl font-medium'>DISCOVER WITH US</p>
           <Link href={'#whyUsInfographicsSection'} className='duration-150'>
-            <button className='w-fit mx-auto text-2xl font-semibold bg-secondary/60 hover:bg-secondary p-5 md:p-10 rounded-full shadow-md hover:shadow-lg active:bg-primary/70 duration-150'>
+            <button className='w-fit mx-auto text-2xl font-semibold bg-secondary/60 hover:bg-secondary p-5 md:p-10 rounded-full shadow-md hover:shadow-lg active:bg-primary duration-150'>
               {/* DISCOVER WITH US */}
               <CircleArrowOutDownLeft className='-rotate-45 scale-125' />
             </button>

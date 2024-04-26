@@ -7,7 +7,7 @@ import { checkEvenOdd } from '@/lib/utils'
 const InfographicSection = () => {
   return (
     <MaxWidthWrapper
-      className='min-h-[80vh] scroll-mt-0 2xl:scroll-mt-36 p-0 md:p-5'
+      className='min-h-[80vh] scroll-mt-[6.5rem] 2xl:scroll-mt-36 p-0 md:p-5'
       id='whyUsInfographicsSection'
     >
       <div className='text-center'>
