@@ -7,8 +7,8 @@ import MaxWidthWrapper from '../MaxWidthWrapper'
 
 const LandingSection = () => {
   return (
-    <MaxWidthWrapper className='pt-10 md:pt-24 2xl:pt-16 min-h-[90vh] md:min-h-[80vh]'>
-      <div className='flex flex-col justify-center h-[85vh] md:h-[75vh] space-y-2 md:space-y-10 2xl:space-y-14'>
+    <MaxWidthWrapper className='pt-7 md:pt-24 2xl:pt-16 px-0 min-h-[90vh] md:min-h-[80vh]'>
+      <div className='flex flex-col justify-center h-[85vh] md:h-[75vh] space-y-5 md:space-y-10 2xl:space-y-14'>
         <motion.h1
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

@@ -9,7 +9,7 @@ const WhyUs = () => {
         <LandingSection />
       </div>
 
-      <div>
+      <div className=''>
         <InfographicSection />
       </div>
     </div>
