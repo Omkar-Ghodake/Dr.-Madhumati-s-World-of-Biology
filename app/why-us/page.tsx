@@ -4,7 +4,7 @@ import React from 'react'
 
 const WhyUs = () => {
   return (
-    <div>
+    <div className='flex flex-col mb-10'>
       <div className=''>
         <LandingSection />
       </div>

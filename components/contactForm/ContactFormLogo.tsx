@@ -10,10 +10,11 @@ const ContactFormLogo = () => {
   return (
     <>
       <Image
-        src={`/${theme === 'light' ? 'logo_dark.png' : 'logo_light.png'}`}
+        src={`/icons/contact-mail.png`}
         alt=''
         width={90}
         height={70}
+        className={`${theme === 'dark' && 'invert'}`}
       />
     </>
   )

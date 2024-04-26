@@ -15,7 +15,7 @@ const ContactUs = () => {
           <div className='flex flex-col space-y-4'>
             <h2 className='font-medium'>Contact Us on:</h2>
 
-            <div className='contact-group flex items-center space-x-2 md:space-x-5'>
+            <div className='contact-group flex justify-between md:justify-start items-center md:space-x-5'>
               <span>
                 <Phone className='' />
               </span>
@@ -35,24 +35,49 @@ const ContactUs = () => {
               </span>
             </div>
 
-            <div className='contact-group flex items-center space-x-2 md:space-x-5'>
-              <span>
-                <Image
-                  src={'/icons/youtube.svg'}
-                  alt='YouTube'
-                  width={30}
-                  height={15}
-                />
-              </span>
-              <span>
-                <Link
-                  href='https://www.youtube.com/@dr.madhumatisbiology9147'
-                  target='_blank'
-                  className='flex items-center hover:text-primary duration-150'
-                >
-                  Dr. Madhumati&apos;s Biology <ExternalLink className='ml-2' />
-                </Link>
-              </span>
+            <div className='flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0'>
+              <div className='contact-group flex justify-start items-center space-x-2 md:space-x-5'>
+                <span>
+                  <Image
+                    src={'/icons/youtube.svg'}
+                    alt='YouTube'
+                    width={30}
+                    height={30}
+                  />
+                </span>
+                <span>
+                  <Link
+                    href='https://www.youtube.com/@dr.madhumatisbiology9147'
+                    target='_blank'
+                    className='flex items-center hover:text-primary duration-150'
+                  >
+                    Youtube Channel
+                    <ExternalLink className='ml-2' />
+                  </Link>
+                </span>
+              </div>
+
+              <span className='w-[1.4px] h-[20px] bg-black hidden md:block'></span>
+
+              <div className='contact-group flex justify-start items-center space-x-2 md:space-x-5'>
+                <span>
+                  <Image
+                    src={'/icons/instagram.svg'}
+                    alt='YouTube'
+                    width={30}
+                    height={30}
+                  />
+                </span>
+                <span>
+                  <Link
+                    href='https://www.instagram.com/worldofbiology_academy'
+                    target='_blank'
+                    className='flex items-center hover:text-primary duration-150'
+                  >
+                    Instagram Page <ExternalLink className='ml-2' />
+                  </Link>
+                </span>
+              </div>
             </div>
           </div>
 

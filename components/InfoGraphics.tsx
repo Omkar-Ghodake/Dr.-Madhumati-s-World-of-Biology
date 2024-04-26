@@ -14,12 +14,23 @@ const InfoGraphics = ({
 }) => {
   return (
     <>
-      <div className='w-full flex h-[30rem]'>
-        <div className={`relative w-1/2 h-full ${inverse && 'order-2'}`}>
-          <Image src={imgSrc} alt='' fill />
+      <div className='w-full h-fit md:h-[30rem] flex flex-col space-y-2 md:space-y-0 md:flex-row bg-secondary p-5 md:p-0 rounded-xl'>
+        <div
+          className={`md:relative w-full md:w-1/2 md:h-full bg-secondary rounded-lg ${
+            inverse && 'md:order-2'
+          }`}
+        >
+          <Image src={imgSrc} alt='' className='hidden md:block' fill />
+          <Image
+            src={imgSrc}
+            alt=''
+            className='md:hidden'
+            width={400}
+            height={150}
+          />
         </div>
 
-        <div className='w-1/2 h-full px-5 py-10 flex flex-col justify-center'>
+        <div className='w-full md:w-1/2 md:h-full md:px-5 md:py-10 flex flex-col justify-center'>
           <h3 className='text-3xl font-medium'>{title}</h3>
 
           <p className='text-lg mt-3'>{desc}</p>
