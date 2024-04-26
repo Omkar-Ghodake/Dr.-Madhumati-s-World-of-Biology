@@ -24,7 +24,7 @@ const ActiveImage = ({
 }) => {
   return (
     selectedImage.src && (
-      <div className='fixed inset-0 z-50 bg-black/80 text-white flex justify-center items-center select-none'>
+      <div className='fixed inset-0 z-50 bg-black/80 text-white flex flex-col md:flex-row justify-center items-center select-none'>
         <X
           className='absolute text-white top-5 right-5  md:top-20 md:right-32 cursor-pointer z-50 hover:scale-125 duration-150'
           onClick={() => {
@@ -33,7 +33,7 @@ const ActiveImage = ({
         />
 
         <div
-          className='cursor-pointer scale-150 hover:bg-slate-50/30 p-2 rounded-full duration-150 mr-5'
+          className='hidden md:block cursor-pointer scale-150 hover:bg-slate-50/30 p-2 rounded-full duration-150 mr-5'
           onClick={getPreviousImage}
         >
           <ChevronLeft />
@@ -43,7 +43,7 @@ const ActiveImage = ({
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className='relative w-2/3 h-2/3 rounded-xl'
+          className='relative w-full md:w-2/3 h-2/3 rounded-xl'
         >
           <Image
             src={selectedImage.src}
@@ -54,10 +54,26 @@ const ActiveImage = ({
         </motion.div>
 
         <div
-          className='cursor-pointer scale-150 hover:bg-slate-50/30 p-2 rounded-full duration-150 ml-5'
+          className='hidden md:block cursor-pointer scale-150 hover:bg-slate-50/30 p-2 rounded-full duration-150 ml-5'
           onClick={getNextImage}
         >
           <ChevronRight className='' />
+        </div>
+
+        <div className='md:hidden flex justify-between items-center space-x-10'>
+          <div
+            className='cursor-pointer scale-150 hover:bg-slate-50/30 p-2 rounded-full duration-150 mr-5'
+            onClick={getPreviousImage}
+          >
+            <ChevronLeft />
+          </div>
+
+          <div
+            className='cursor-pointer scale-150 hover:bg-slate-50/30 p-2 rounded-full duration-150 ml-5'
+            onClick={getNextImage}
+          >
+            <ChevronRight className='' />
+          </div>
         </div>
       </div>
     )
