@@ -1,8 +1,9 @@
-import interactiveSession from '../public/weProvideInfographics/interactive_sessions_0.png'
-import focusOnIndividuals from '../public/weProvideInfographics/focus_on_individual.svg'
-import regularRests from '../public/weProvideInfographics/regular_tests.jpg'
-import lessStudents from '../public/weProvideInfographics/less_students.svg'
-import practicalKnowledge from '../public/weProvideInfographics/practical_knowledge.svg'
+import interactiveSession from '../public/weProvideInfographics/interactive_sessions.png'
+import focusOnIndividuals from '../public/weProvideInfographics/focus_on_individual.png'
+import regularTests from '../public/weProvideInfographics/regular_tests.png'
+import lessStudents from '../public/weProvideInfographics/less_students.png'
+import expertsTeaching from '../public/weProvideInfographics/experts_teaching.png'
+import hollisticLearning from '../public/weProvideInfographics/hollistic_learning.png'
 
 export const WHY_US_INFOGRAPICS = [
   {
@@ -13,7 +14,17 @@ export const WHY_US_INFOGRAPICS = [
   {
     title: 'Regular Tests for Progress Monitoring',
     desc: 'Stay on track with a comprehensive assessment system that includes regular tests, quizzes, and mock exams, providing valuable feedback, measuring progress, and helping you stay focused and motivated towards achieving excellence in biology education.',
-    imgSrc: regularRests,
+    imgSrc: regularTests,
+  },
+  {
+    title: 'Expert Medical Insight',
+    desc: 'Benefit from the expertise of medical doctor who bring clinical insights, real-world experience, and advanced knowledge in biology, providing a comprehensive and professional learning environment.',
+    imgSrc: expertsTeaching,
+  },
+  {
+    title: 'Holistic Learning Experience',
+    desc: 'Acquire not only textbook knowledge but also essential life skills such as critical thinking, problem-solving, collaboration, and adaptability, equipping you for success in academic pursuits and beyond.',
+    imgSrc: hollisticLearning,
   },
   {
     title: 'Focus on Individual Students',
@@ -24,10 +35,5 @@ export const WHY_US_INFOGRAPICS = [
     title: 'Personalized Attention in Small Batches',
     desc: 'Enjoy a supportive learning environment with smaller class sizes that promote meaningful interactions, one-on-one guidance from experienced faculty, and a collaborative atmosphere conducive to deep learning and academic success.',
     imgSrc: lessStudents,
-  },
-  {
-    title: 'Practical Knowledge',
-    desc: 'Gain hands-on experience and practical skills through laboratory experiments, field trips, and real-world case studies, enhancing your understanding and application of biology concepts in practical scenarios.',
-    imgSrc: practicalKnowledge,
   },
 ]

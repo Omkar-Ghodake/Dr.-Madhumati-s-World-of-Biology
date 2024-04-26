@@ -24,7 +24,7 @@ const InfographicSection = () => {
         </h3>
       </div>
 
-      <div className='mt-10 md:mt-0 flex flex-col justify-start items-center space-y-10'>
+      <div className='mt-10 md:mt-5 flex flex-col justify-start items-center space-y-10'>
         {WHY_US_INFOGRAPICS.map((item, index) => (
           <InfoGraphics
             key={index}

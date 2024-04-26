@@ -20,13 +20,20 @@ const InfoGraphics = ({
             inverse && 'md:order-2'
           }`}
         >
-          <Image src={imgSrc} alt='' className='hidden md:block' fill />
+          <Image
+            src={imgSrc}
+            alt=''
+            className='hidden md:block'
+            fill
+            placeholder='blur'
+          />
           <Image
             src={imgSrc}
             alt=''
             className='md:hidden'
             width={400}
             height={150}
+            placeholder='blur'
           />
         </div>
 
