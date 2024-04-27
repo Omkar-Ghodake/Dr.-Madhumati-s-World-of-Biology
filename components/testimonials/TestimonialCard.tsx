@@ -25,7 +25,7 @@ const TestimonialCard = ({
 }) => {
   return (
     <Dialog>
-      <div className='relative border p-5 w-full h-[60vh] md:h-[50vh] flex flex-col items-center justify-start shadow-lg rounded-2xl bg-secondary text-ellipsis'>
+      <div className='relative border p-5 w-full h-[60vh] md:h-[54vh] flex flex-col items-center justify-start shadow-lg rounded-2xl bg-secondary text-ellipsis'>
         <div className='absolute -top-12 w-24 h-24'>
           <div className='relative card-img w-full h-full'>
             <Image src={imgUrl} alt='' fill className='' />
