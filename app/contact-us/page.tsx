@@ -7,9 +7,9 @@ import Link from 'next/link'
 
 const ContactUs = () => {
   return (
-    <MaxWidthWrapper className='md:overflow-y-hidden md:max-w-[80vw]'>
-      <div className='flex flex-col md:flex-row items-center h-full md:space-x-10 space-y-8 md:space-y-0 mt-5 md:mt-0'>
-        <div className='flex flex-col justify-between space-y-5 w-full md:w-1/2 h-full pb-3 mt-2 md:mt-0'>
+    <MaxWidthWrapper className='md:overflow-y-hidden md:max-w-[80vw] pt-10 md:pt-20 px-0 md:px-5'>
+      <div className='flex flex-col md:flex-row h-full md:space-x-10 space-y-8 md:space-y-0 mt-5 md:mt-0'>
+        <div className='flex flex-col justify-between w-full md:w-1/2 md:h-[75vh] pb-3 space-y-3 md:space-y-0'>
           <h1 className='text-2xl font-medium'>Having Questions?</h1>
 
           <div className='flex flex-col space-y-4'>
@@ -51,7 +51,7 @@ const ContactUs = () => {
                     target='_blank'
                     className='flex items-center hover:text-primary duration-150'
                   >
-                    Youtube Channel
+                    Youtube
                     <ExternalLink className='ml-2' />
                   </Link>
                 </span>
@@ -74,7 +74,8 @@ const ContactUs = () => {
                     target='_blank'
                     className='flex items-center hover:text-primary duration-150'
                   >
-                    Instagram Page <ExternalLink className='ml-2' />
+                    Instagram
+                    <ExternalLink className='ml-2' />
                   </Link>
                 </span>
               </div>
@@ -101,14 +102,8 @@ const ContactUs = () => {
           </div>
         </div>
 
-        <div className='flex flex-col justify-center space-y-5 w-full md:w-1/2 h-full pb-3 '>
-          <h1 className='text-2xl font-medium text-center'>
-            Send Us a Message
-          </h1>
-
-          <div className='h-full'>
-            <ContactForm />
-          </div>
+        <div className='flex flex-col justify-between w-full md:w-1/2 md:h-[75vh] pb-3'>
+          <ContactForm />
         </div>
       </div>
     </MaxWidthWrapper>

@@ -87,7 +87,7 @@ const PhotoGallery = () => {
         <div className='mt-10 flex flex-col justify-center space-y-5'>
           <h1 className='text-center text-4xl font-semibold flex justify-center items-center space-x-5'>
             <span>IMAGES</span>
-            <CameraGif />
+            {/* <CameraGif /> */}
           </h1>
 
           <div className='img-container grid grid-cols-gallery gap-2'>
@@ -95,6 +95,7 @@ const PhotoGallery = () => {
               <ImageGrid
                 key={index}
                 title={image.title}
+                index={index}
                 src={image.src}
                 selectedImage={selectedImage}
                 setSelectedImage={setSelectedImage}

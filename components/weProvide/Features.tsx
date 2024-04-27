@@ -1,6 +1,5 @@
 import React from 'react'
 import MaxWidthWrapper from '../MaxWidthWrapper'
-import FeatureTimeline from './FeatureTimeline'
 import KeyHighlight from './KeyHighlight'
 import { FEATURES_AND_BENEFITS } from '@/data/featuresData'
 
@@ -29,7 +28,7 @@ const Features = () => {
         </h3>
       </div>
 
-      <div className='flex flex-wrap'>
+      <div className='flex flex-col md:flex-row flex-wrap'>
         {FEATURES_AND_BENEFITS.map((item, index) => (
           <KeyHighlight key={index} title={item.title} imgSrc={item.imgSrc} />
         ))}

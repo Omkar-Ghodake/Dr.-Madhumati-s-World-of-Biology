@@ -2,15 +2,18 @@
 
 import Image, { StaticImageData } from 'next/image'
 import { Dispatch, SetStateAction } from 'react'
+import { motion } from 'framer-motion'
 
 const ImageGrid = ({
   title,
   src,
+  index,
   selectedImage,
   setSelectedImage,
 }: {
   title: string
   src: StaticImageData
+  index: number
   selectedImage: {
     src: StaticImageData | null
     imgTitle: string | null
@@ -67,12 +70,15 @@ const ImageGrid = ({
         </div>
       </div> */}
 
-      <div
+      <motion.div
         key={title}
         className={`relative img-box rounded-xl cursor-pointer duration-300 h-64 group`}
         onClick={() => {
           !selectedImage.src && setSelectedImage({ src: src, imgTitle: title })
         }}
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.1, delay: 0.03 * index }}
       >
         <Image
           src={src}
@@ -82,7 +88,7 @@ const ImageGrid = ({
           placeholder='blur'
           fill
         />
-      </div>
+      </motion.div>
     </>
   )
 }

@@ -14,8 +14,8 @@ const KeyHighlight = ({
   const { theme } = useTheme()
 
   return (
-    <div className='w-1/3 p-4'>
-      <div className='w-full p-4 flex flex-col justify-center items-center space-y-5 border-2 rounded-3xl shadow-lg h-full'>
+    <div className='w-full md:w-1/3 p-4 min-h-64'>
+      <div className='w-full p-4 flex flex-col justify-center items-center space-y-5 border rounded-3xl shadow-lg h-full'>
         <div className=''>
           <Image
             src={imgSrc}

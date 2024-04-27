@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import './globals.css'
+import Footer from '@/components/footer/Footer'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -29,7 +30,9 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
 
-          <div className='mt-[8vh] md:mt-[12vh]'>{children}</div>
+          <div className='mt-[8vh] md:mt-[12vh] mb-[8vh]'>{children}</div>
+
+          <Footer />
 
           <ThemeButton />
         </ThemeProvider>

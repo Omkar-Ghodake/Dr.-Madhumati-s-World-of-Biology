@@ -17,7 +17,7 @@ const MaxWidthWrapper = ({
   return (
     <div
       className={cn(
-        `MaxWidthWrapper p-5 md:max-w-[75vw] w-[90vw] mx-auto md:h-[88vh] ${
+        `MaxWidthWrapper p-5 md:max-w-[75vw] w-[90vw] mx-auto md:min-h-[88vh] ${
           heightPage &&
           `${heightSmPage && 'h-[88vh]'} md:h-[88vh] overflow-y-hidden`
         }`,
