@@ -12,3 +12,12 @@ export const checkEvenOdd = (num: number): boolean => {
     return false
   }
 }
+
+export const limitText = (text: string, limit: number) => {
+  if (text.length > limit) {
+    text = text.substring(0, limit) + '...'
+    return text
+  }
+
+  return false
+}

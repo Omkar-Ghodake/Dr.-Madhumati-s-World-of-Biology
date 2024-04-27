@@ -85,7 +85,7 @@
 @layer components {
   /* width */
   .custom-scrollbar::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
   }
 
   .scrollbar-sm::-webkit-scrollbar {
@@ -94,7 +94,7 @@
 
   /* Track */
   .custom-scrollbar::-webkit-scrollbar-track {
-    @apply bg-secondary rounded-full;
+    @apply bg-secondary-foreground/10 rounded-full;
   }
 
   /* Handle */

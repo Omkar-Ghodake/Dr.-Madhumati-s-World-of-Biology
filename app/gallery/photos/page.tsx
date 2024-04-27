@@ -7,6 +7,7 @@ import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import { IMAGE_GALLERY } from '@/data/imagesData'
 import { StaticImageData } from 'next/image'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 const PhotoGallery = () => {
   const [selectedImage, setSelectedImage] = useState<{
@@ -85,10 +86,14 @@ const PhotoGallery = () => {
         heightSmPage
       >
         <div className='mt-10 flex flex-col justify-center space-y-5'>
-          <h1 className='text-center text-4xl font-semibold flex justify-center items-center space-x-5'>
+          <motion.h1
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            className='text-center text-4xl font-semibold flex justify-center items-center space-x-5'
+          >
             <span>IMAGES</span>
-            {/* <CameraGif /> */}
-          </h1>
+            <CameraGif />
+          </motion.h1>
 
           <div className='img-container grid grid-cols-gallery gap-2'>
             {IMAGE_GALLERY.map((image, index) => (

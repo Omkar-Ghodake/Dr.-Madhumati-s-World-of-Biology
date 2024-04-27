@@ -2,19 +2,20 @@
 
 import { useTheme } from '@/context/ThemeProvider'
 import Image from 'next/image'
-import React from 'react'
 
 const CameraGif = () => {
   const { theme } = useTheme()
 
   return (
-    <Image
-      src={'/camera.gif'}
-      alt=''
-      width={60}
-      height={40}
-      className={`${theme === 'dark' && 'invert'}`}
-    />
+    <div className=''>
+      <Image
+        src={`/camera.png`}
+        alt=''
+        width={60}
+        height={40}
+        className={`${theme === 'dark' && 'invert'}`}
+      />
+    </div>
   )
 }
 
