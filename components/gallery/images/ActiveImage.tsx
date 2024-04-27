@@ -60,16 +60,16 @@ const ActiveImage = ({
           <ChevronRight className='' />
         </div>
 
-        <div className='md:hidden flex justify-between items-center space-x-10'>
+        <div className='md:hidden absolute w-full px-4 flex justify-between items-center space-x-10'>
           <div
-            className='cursor-pointer scale-150 hover:bg-slate-50/30 p-2 rounded-full duration-150 mr-5'
+            className='cursor-pointer scale-150 hover:bg-slate-50/30 p-1 rounded-full duration-150 mr-5'
             onClick={getPreviousImage}
           >
             <ChevronLeft />
           </div>
 
           <div
-            className='cursor-pointer scale-150 hover:bg-slate-50/30 p-2 rounded-full duration-150 ml-5'
+            className='cursor-pointer scale-150 hover:bg-slate-50/30 p-1 rounded-full duration-150 ml-5'
             onClick={getNextImage}
           >
             <ChevronRight className='' />
