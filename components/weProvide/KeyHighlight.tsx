@@ -15,7 +15,7 @@ const KeyHighlight = ({
 
   return (
     <div className='w-full md:w-1/3 p-4 min-h-64'>
-      <div className='w-full p-4 flex flex-col justify-center items-center space-y-5 border rounded-3xl shadow-sm shadow-white h-full'>
+      <div className='w-full p-4 flex flex-col justify-center items-center space-y-5 border rounded-3xl shadow-md shadow-gray-500 h-full'>
         <div className=''>
           <Image
             src={imgSrc}
