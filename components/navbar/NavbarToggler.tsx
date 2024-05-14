@@ -23,20 +23,20 @@ const NavbarToggler = ({
       <div
         className={`w-[22px] h-[1.5px] bg-primary ${
           isNavbarOpen &&
-          'rotate-[46.5deg] w-[25px] h-[2px] translate-y-[6.29px] translate-x-[1px]'
+          'rotate-[45deg] w-[25px] h-[2px] absolute'
         } duration-150`}
       ></div>
 
       <div
         className={`w-[22px] h-[1.5px] bg-primary ${
-          isNavbarOpen && 'hidden'
+          isNavbarOpen && 'bg-transparent'
         } duration-150`}
       ></div>
 
       <div
         className={`w-[22px] h-[1.5px] bg-primary ${
           isNavbarOpen &&
-          '-rotate-[46.5deg] w-[25px] h-[2px] -translate-y-[6.29px] translate-x-[1px]'
+          '-rotate-[45deg] w-[25px] h-[2px] absolute'
         } duration-150`}
       ></div>
     </Button>
