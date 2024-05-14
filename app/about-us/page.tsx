@@ -1,4 +1,5 @@
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
+import DirectorInfo from '@/components/about-us/directorInfo'
 import Image from 'next/image'
 import React from 'react'
 
@@ -18,6 +19,11 @@ const AboutUs = () => {
           Dr Madhumati&apos;s World of Biology
         </h2>
       </div>
+    <div>
+      <DirectorInfo title='Engg Sachin Paithane' desc='hello everyone its Sachin Paithane'/>
+    </div>
+
+
     </MaxWidthWrapper>
   )
 }
