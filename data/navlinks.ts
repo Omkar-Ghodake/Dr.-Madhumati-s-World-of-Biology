@@ -10,7 +10,7 @@ export const NAVLINKS_LEFT: NavLinks[] = [
     url: '/we-provide',
   },
   {
-    title: 'Admission Open',
+    title: 'About Us',
     url: '/about-us',
   },
   {
@@ -25,8 +25,8 @@ export const NAVLINKS_RIGHT: NavLinks[] = [
     url: '/gallery/photos',
   },
   {
-    title: 'About Us',
-    url: '/about-us',
+    title: 'Videos',
+    url: '/gallery/videos',
   },
   {
     title: 'Testimonials',
