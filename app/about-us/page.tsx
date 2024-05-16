@@ -1,12 +1,13 @@
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import Image from 'next/image'
 import React from 'react'
+import medicalExpert from '@/public/medical_expert.png'
 
 const AboutUs = () => {
   return (
     <MaxWidthWrapper className='flex flex-col md:flex-row justify-between items-center md:space-x-10 space-y-5 md:space-y-0 pt-10 md:pt-24 px-0 md:px-5'>
       <div className='relative h-[25vh] md:h-[50vh] w-[25vh] md:w-[50vh]'>
-        <Image src={'/medical_expert.png'} alt='' fill />
+        <Image src={medicalExpert} alt='' fill placeholder='blur' />
       </div>
 
       <div className='flex-1 h-full md:p-5'>

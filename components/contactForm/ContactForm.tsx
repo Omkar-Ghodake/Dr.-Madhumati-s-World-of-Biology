@@ -52,7 +52,7 @@ const ContactForm = () => {
     <div className='h-full shadow-2xl rounded-lg border p-5 flex flex-col items-center space-y-5'>
       <div className='logo flex justify-center items-center space-x-5'>
         <ContactFormLogo />
-        <h3 className='text-2xl font-medium text-center h-full flex justify-center items-center'>
+        <h3 className='text-2xl md:text-xl font-medium text-center h-full flex justify-center items-center'>
           Send Us a Message
         </h3>
       </div>
