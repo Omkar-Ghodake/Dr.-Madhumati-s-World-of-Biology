@@ -24,3 +24,7 @@ export type NeetCETBatchInfoProps_batches = {
   eduBoards: string[]
   eduSubjects: string[]
 }
+export type ServerActionRetrunType={
+  success:boolean
+  message:string
+}

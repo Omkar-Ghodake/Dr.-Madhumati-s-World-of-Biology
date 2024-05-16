@@ -26,7 +26,7 @@ const KeyHighlight = ({
           />
         </div>
 
-        <p className='text-center text-xl'>{title}</p>
+        <p className='text-center text-primary font-semibold text-xl'>{title}</p>
       </div>
     </div>
   )
