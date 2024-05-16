@@ -17,6 +17,7 @@ import { Input } from '../ui/input'
 import ContactFormLogo from './ContactFormLogo'
 import { Textarea } from '../ui/textarea'
 import { SendHorizonal } from 'lucide-react'
+import { submitContactForm } from '@/server-actions/contact'
 
 const formSchema = z.object({
   fname: z.string().min(2, {
@@ -43,9 +44,7 @@ const ContactForm = () => {
   })
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log('🚀 ~ onSubmit ~ values:', values)
+    submitContactForm(values)
   }
 
   return (
