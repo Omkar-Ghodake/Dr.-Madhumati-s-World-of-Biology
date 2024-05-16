@@ -12,8 +12,8 @@ const ContactFormLogo = () => {
       <Image
         src={`/icons/social/mail.svg`}
         alt=''
-        width={70}
-        height={50}
+        width={30}
+        height={30}
         className={`${theme === 'dark' && 'invert'}`}
       />
     </>

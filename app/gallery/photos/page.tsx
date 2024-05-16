@@ -28,10 +28,6 @@ const PhotoGallery = () => {
         const currentImgIndex = IMAGE_GALLERY.indexOf(currentImg)
 
         if (currentImgIndex !== undefined) {
-          console.log(
-            '🚀 ~ getPreviousImage ~ currentImgIndex:',
-            currentImgIndex
-          )
           const nextImageIndex = currentImgIndex - 1
 
           if (currentImgIndex === 0) {
@@ -95,7 +91,11 @@ const PhotoGallery = () => {
             <CameraGif />
           </motion.h1>
 
-          <div className='img-container grid grid-cols-gallery gap-2'>
+          <div
+            className={`img-container grid grid-cols-gallery gap-2 ${
+              selectedImage.src && ''
+            }`}
+          >
             {IMAGE_GALLERY.map((image, index) => (
               <ImageGrid
                 key={index}
