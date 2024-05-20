@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { X } from 'lucide-react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import homeAdBanner from '@/public/ads/home_ad_banner.jpg'
 
 const HomeAd = () => {
   const [showAd, setShowAd] = useState<boolean | null>(null)
@@ -40,10 +41,11 @@ const HomeAd = () => {
         transition={{ duration: 0.25 }}
       >
         <Image
-          src={'/ads/home_ad_banner.jpg'}
+          src={homeAdBanner}
           alt=''
           fill
           className='object-contain'
+          placeholder='blur'
         />
       </motion.div>
     </motion.div>
