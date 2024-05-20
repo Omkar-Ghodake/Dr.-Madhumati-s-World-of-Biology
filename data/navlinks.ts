@@ -2,7 +2,7 @@ import { NavLinks } from '@/types/dataTypes'
 
 export const NAVLINKS_LEFT: NavLinks[] = [
   {
-    title: 'Home',
+    title: 'Ghar',
     url: '/',
   },
   {
