@@ -36,6 +36,10 @@ const config = {
           DEFAULT: 'var(--mono)',
           foreground: 'var(--mono-inv)',
         },
+        secondaryDark: {
+          DEFAULT: 'var(--secondary-dark)',
+          // foreground: 'var(--mono-inv)',
+        },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
