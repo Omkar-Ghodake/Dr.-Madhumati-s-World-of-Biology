@@ -4,6 +4,7 @@ import { Montserrat } from 'next/font/google'
 import ContentHead from '@/components/home/ContentHead'
 import ContentBody from '@/components/home/ContentBody'
 import ContentFooter from '@/components/home/ContentFooter'
+import HomeAd from '@/components/advertisements/HomeAd'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -32,6 +33,8 @@ export default function Home() {
       </div>
 
       <LandingPageBanner />
+
+      <HomeAd />
     </MaxWidthWrapper>
   )
 }
