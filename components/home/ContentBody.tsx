@@ -15,9 +15,10 @@ const ContentBody = () => {
         <span className='text-4xl md:text-5xl'>Madhutmati&apos;s</span>
       </span>
 
-      <br />
+      <br className='' />
+      <br className='hidden md:block' />
 
-      <span className='text-5xl md:text-[4.8rem] text-primary'>
+      <span className='text-5xl md:text-[4.4rem] text-primary drop-shadow-xl'>
         World of Biology
       </span>
     </motion.span>

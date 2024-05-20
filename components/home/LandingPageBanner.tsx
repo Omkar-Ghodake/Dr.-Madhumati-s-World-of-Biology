@@ -3,16 +3,16 @@
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
-import LandingPageBannerImage from '@/public/landing_page_banner_img.png'
+import LandingPageBannerImage from '@/public/cover_photo.jpg'
 
 const LandingPageBanner = () => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
-      className='md:right flex justify-center items-center w-full md:w-1/2 order-1 md:order-2 rounded-lg mt-10 mb-5 md:my-0'
+      className='md:right flex justify-center md:justify-end items-center w-full md:w-1/2 order-1 md:order-2 rounded-3xl mt-10 mb-5 md:my-0'
     >
-      <div className='relative w-[12rem] md:w-[37rem] h-[12rem] md:h-[30rem] rounded-lg shadow-lg'>
+      <div className='relative w-[20rem] md:w-[35rem] h-[20rem] md:h-[35rem] rounded-3xl'>
         <Image
           src={LandingPageBannerImage}
           alt=''
