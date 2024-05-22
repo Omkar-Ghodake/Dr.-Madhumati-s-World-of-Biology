@@ -57,7 +57,7 @@ const ContactUs = () => {
                 </span>
               </div>
 
-              <span className="w-[1.4px] h-[20px] bg-black hidden md:block"></span>
+              <span className="w-[2px] h-[20px] bg-black"></span>
 
               <div className="contact-group flex justify-start items-center space-x-2 md:space-x-5">
                 <span>
