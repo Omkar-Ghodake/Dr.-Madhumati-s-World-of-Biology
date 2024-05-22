@@ -11,7 +11,7 @@ const page = () => {
       <AdmissionsHead />
       <div className="flex justify-center items-center mb-10">
         <Button size={"lg"} className="text-xl font-semibold" asChild>
-          <Link className="" href={"/we-provide"}>
+          <Link className="" href={"/contact-us"}>
             Contact Us
           </Link>
         </Button>
