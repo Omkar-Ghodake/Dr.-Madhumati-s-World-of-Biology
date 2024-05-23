@@ -1,7 +1,6 @@
 'use client'
 
 import { ServerActionReturnType } from '@/types/dataTypes'
-import emailjs from 'emailjs-com'
 
 export const submitContactForm = async ({
   message,

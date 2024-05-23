@@ -18,8 +18,6 @@ import ContactFormLogo from './ContactFormLogo'
 import { Textarea } from '../ui/textarea'
 import { SendHorizonal } from 'lucide-react'
 import { submitContactForm } from '@/server-actions/contact'
-import emailjs from 'emailjs-com'
-import { Resend } from 'resend'
 
 const formSchema = z.object({
   fname: z.string().min(2, {
