@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import React from 'react'
 
-const page = () => {
+const Admissions = () => {
   return (
     <MaxWidthWrapper className='flex flex-col justify-between space-y-20 p-0'>
       <div className='h-[80vh] md:h-[83vh] flex flex-col justify-between'>
@@ -33,4 +33,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Admissions
