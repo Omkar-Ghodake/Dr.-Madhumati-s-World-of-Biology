@@ -21,3 +21,7 @@ export type NeetCETBatchInfoProps = {
   className?: string
   timings?: string
 }
+
+export interface EmailTemplateProps {
+  firstName: string
+}
