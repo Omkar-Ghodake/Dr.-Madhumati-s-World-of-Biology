@@ -12,7 +12,7 @@ const ContentBody = () => {
     >
       <span className=''>
         <span className='text-4xl md:text-5xl'>Dr. </span>
-        <span className='text-4xl md:text-5xl'>Madhutmati&apos;s</span>
+        <span className='text-4xl md:text-5xl'>Madhumati&apos;s</span>
       </span>
 
       <br className='' />
