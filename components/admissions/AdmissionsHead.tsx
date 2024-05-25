@@ -16,7 +16,7 @@ const AdmissionsHead = () => {
         Confirm Your Seats Now
       </motion.h1>
 
-      <div className='flex flex-col md:flex-row md:justify-between md:space-y-0 md:space-x-10 w-full h-full'>
+      <div className='flex flex-col md:flex-row md:justify-between space-y-2 md:space-y-0 md:space-x-10 w-full h-full'>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -38,7 +38,7 @@ const AdmissionsHead = () => {
           className='relative flex justify-center items-center h-[30vh] md:h-[45vh] w-full md:w-[46%]'
         >
           <video controls autoPlay={true} className='w-full h-full'>
-            <source src={'/shortVideos/mainVideo.mp4'} />
+            <source src={'/admissionsVids/main.mp4'} />
             Your browser does not support the video tag...
           </video>
         </motion.div>
