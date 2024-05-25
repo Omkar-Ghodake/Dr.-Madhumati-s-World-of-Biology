@@ -1,9 +1,12 @@
+'use client'
+
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import AdmissionsHead from '@/components/admissions/AdmissionsHead'
 import ShortVideos from '@/components/admissions/ShortVideos'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const Admissions = () => {
   return (
@@ -11,13 +14,17 @@ const Admissions = () => {
       <div className='h-[80vh] md:h-[83vh] flex flex-col justify-between'>
         <AdmissionsHead />
 
-        <div className='flex justify-center items-center'>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          className='flex justify-center items-center'
+        >
           <Button size={'lg'} className='text-xl font-semibold' asChild>
             <Link className='' href={'/contact-us'}>
-              Contact Us
+              Contact for Admission
             </Link>
           </Button>
-        </div>
+        </motion.div>
       </div>
 
       <div className='flex flex-col space-y-14 min-h-[45vh]'>
