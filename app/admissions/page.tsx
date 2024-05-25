@@ -20,11 +20,14 @@ const page = () => {
         </div>
       </div>
 
-      <div className='flex flex-col space-y-10 min-h-[45vh]'>
+      <div className='flex flex-col space-y-14 min-h-[45vh]'>
         <h1 className='text-center text-4xl font-semibold'>
           Watch Our Video Shorts
         </h1>
-        <ShortVideos />
+
+        <div className='h-[60vh]'>
+          <ShortVideos />
+        </div>
       </div>
     </MaxWidthWrapper>
   )

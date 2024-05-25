@@ -2,9 +2,9 @@ import React from 'react'
 
 const ShortVideos = () => {
   return (
-    <div className='w-full overflow-hidden custom-scrollbar p-2'>
-      <div className='flex w-full justify-between'>
-        <div className='relative w-fit h-[20vh] md:h-[50vh] rounded-xl mx-5 select-none'>
+    <div className='w-full overflow-hidden custom-scrollbar p-2 scale-[1.3]'>
+      <div className='flex w-full justify-center space-x-5'>
+        <div className='relative w-fit h-[20vh] md:h-[50vh] rounded-xl select-none'>
           <video
             controls
             autoPlay={true}
@@ -14,7 +14,7 @@ const ShortVideos = () => {
             Your browser does not support the video tag...
           </video>
         </div>
-        <div className='relative w-fit h-[20vh] md:h-[50vh] rounded-xl mx-5 select-none'>
+        <div className='relative w-fit h-[20vh] md:h-[50vh] rounded-xl select-none'>
           <video
             controls
             autoPlay={true}
@@ -24,7 +24,7 @@ const ShortVideos = () => {
             Your browser does not support the video tag...
           </video>
         </div>
-        <div className='relative w-fit h-[20vh] md:h-[50vh] rounded-xl mx-5 select-none'>
+        <div className='relative w-fit h-[20vh] md:h-[50vh] rounded-xl select-none'>
           <video
             controls
             autoPlay={true}
@@ -34,7 +34,7 @@ const ShortVideos = () => {
             Your browser does not support the video tag...
           </video>
         </div>
-        <div className='relative w-fit h-[20vh] md:h-[50vh] rounded-xl mx-5 select-none'>
+        <div className='relative w-fit h-[20vh] md:h-[50vh] rounded-xl select-none'>
           <video
             controls
             autoPlay={true}
