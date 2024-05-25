@@ -1,11 +1,20 @@
 'use client'
 import { motion } from 'framer-motion'
-import { X } from 'lucide-react'
-import Image from 'next/image'
+import { MoveRight, X } from 'lucide-react'
+import Image, { StaticImageData } from 'next/image'
 import { useEffect, useState } from 'react'
-import homeAdBanner from '@/public/ads/home_ad_banner.jpg'
+import { Button } from '../ui/button'
+import Link from 'next/link'
 
-const HomeAd = () => {
+const PopUpAd = ({
+  adImgSrc,
+  redirectTo,
+  redirectionText,
+}: {
+  adImgSrc: StaticImageData
+  redirectTo: string
+  redirectionText: string
+}) => {
   const [showAd, setShowAd] = useState<boolean | null>(null)
 
   const closeAd = () => {
@@ -19,7 +28,7 @@ const HomeAd = () => {
 
   return (
     <motion.div
-      className={`fixed flex justify-center md:items-center h-[100vh] w-[100vw] inset-0  bg-black/80 z-50 overflow-hidden ${
+      className={`fixed flex flex-col justify-center items-center h-[100vh] w-[100vw] inset-0 space-y-10  bg-black/80 z-50 overflow-hidden ${
         !showAd && 'hidden'
       }`}
       initial={{ opacity: 0 }}
@@ -35,21 +44,36 @@ const HomeAd = () => {
       </motion.div>
 
       <motion.div
-        className='relative w-[90%] md:w-1/2 h-1/3 md:h-full flex justify-center items-start md:items-center mt-[25vh] md:mt-0'
+        className='relative w-[90%] md:w-1/2 h-1/3 md:h-3/4 flex justify-center items-start md:items-center mt-[25vh] md:mt-0'
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: showAd ? 1 : 0, opacity: showAd ? 1 : 0 }}
         transition={{ duration: 0.25 }}
       >
         <Image
-          src={homeAdBanner}
+          src={adImgSrc}
           alt=''
           fill
           className='object-contain'
           placeholder='blur'
         />
       </motion.div>
+
+      {redirectTo && (
+        <motion.div>
+          <Button
+            size={'lg'}
+            variant={'link'}
+            className='text-2xl font-medium'
+            asChild
+          >
+            <Link href={redirectTo}>
+              {redirectionText || 'Open'} <MoveRight className='ml-3' />
+            </Link>
+          </Button>
+        </motion.div>
+      )}
     </motion.div>
   )
 }
 
-export default HomeAd
+export default PopUpAd

@@ -4,7 +4,8 @@ import { Montserrat } from 'next/font/google'
 import ContentHead from '@/components/home/ContentHead'
 import ContentBody from '@/components/home/ContentBody'
 import ContentFooter from '@/components/home/ContentFooter'
-import HomeAd from '@/components/advertisements/HomeAd'
+import PopUpAd from '@/components/advertisements/PopUpAd'
+import homeAdBanner from '@/public/ads/home_ad_banner.jpg'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -34,7 +35,11 @@ export default function Home() {
 
       <LandingPageBanner />
 
-      <HomeAd />
+      <PopUpAd
+        adImgSrc={homeAdBanner}
+        redirectTo='/admissions'
+        redirectionText="Get Admissions' info"
+      />
     </MaxWidthWrapper>
   )
 }
