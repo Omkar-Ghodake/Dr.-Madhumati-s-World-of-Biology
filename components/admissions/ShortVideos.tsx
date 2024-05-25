@@ -23,7 +23,6 @@ const ShortVideos = () => {
           >
             <video
               controls
-              autoPlay={true}
               className='rounded-xl w-[20rem] md:w-full h-[30rem] md:h-[50vh] bg-black'
             >
               <source src={'/admissionsVids/main.mp4'} />
@@ -39,7 +38,6 @@ const ShortVideos = () => {
           >
             <video
               controls
-              autoPlay={true}
               className='rounded-xl w-[20rem] md:w-full h-[30rem] md:h-[50vh] bg-black'
             >
               <source src={'/shortVideos/shorts1.mp4'} />
@@ -55,7 +53,6 @@ const ShortVideos = () => {
           >
             <video
               controls
-              autoPlay={true}
               className='rounded-xl w-[20rem] md:w-full h-[30rem] md:h-[50vh] bg-black'
             >
               <source src={'/shortVideos/shorts2.mp4'} />
@@ -71,7 +68,6 @@ const ShortVideos = () => {
           >
             <video
               controls
-              autoPlay={true}
               className='rounded-xl w-[20rem] md:w-full h-[30rem] md:h-[50vh] bg-black'
             >
               <source src={'/shortVideos/shorts3.mp4'} />
