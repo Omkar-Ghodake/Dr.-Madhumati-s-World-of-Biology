@@ -46,21 +46,29 @@ const ContactForm = () => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     // submitContactForm(values);
     const { fname, lname, email, message } = values;
+    let res = {};
     if (
       fname.length >= 3 &&
       lname.length >= 3 &&
       email.length != 0 &&
       message.length >= 5
     ) {
-      await fetch("/api/send", {
-        method: "POST",
-        body: JSON.stringify({
-          fname: fname,
-          lname: lname,
-          email: email,
-          message: message,
-        }),
-      });
+      try {
+        res = await fetch("/api/send", {
+          method: "POST",
+          body: JSON.stringify({
+            fname: fname,
+            lname: lname,
+            email: email,
+            message: message,
+          }),
+        });
+        console.log("Response: ", res);
+      } catch (error) {
+        console.log("error: ", error);
+        console.log("Response: ", res);
+      }
+
       alert("message send successfully.");
     } else {
       alert("fill correct info.");
