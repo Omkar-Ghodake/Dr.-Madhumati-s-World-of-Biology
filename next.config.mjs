@@ -3,12 +3,16 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "avataaars.io",
+        protocol: 'https',
+        hostname: 'avataaars.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'loading.io',
       },
     ],
     dangerouslyAllowSVG: true,
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig

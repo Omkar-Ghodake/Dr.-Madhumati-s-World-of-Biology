@@ -1,11 +1,11 @@
-import LandingPageBanner from '@/components/home/LandingPageBanner'
-import MaxWidthWrapper from '@/components/MaxWidthWrapper'
-import { Montserrat } from 'next/font/google'
-import ContentHead from '@/components/home/ContentHead'
+import PopUpAd from '@/components/advertisements/PopUpAd'
 import ContentBody from '@/components/home/ContentBody'
 import ContentFooter from '@/components/home/ContentFooter'
-import PopUpAd from '@/components/advertisements/PopUpAd'
+import ContentHead from '@/components/home/ContentHead'
+import LandingPageBanner from '@/components/home/LandingPageBanner'
+import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import homeAdBanner from '@/public/ads/home_ad_banner.jpg'
+import { Montserrat } from 'next/font/google'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 

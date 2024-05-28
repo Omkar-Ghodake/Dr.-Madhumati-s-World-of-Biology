@@ -6,6 +6,8 @@ import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import './globals.css'
 import Footer from '@/components/footer/Footer'
+import DNALoader from '@/components/dnaLoader/DNALoader'
+import LoadingProvider from '@/context/LoadingProvider'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -27,15 +29,19 @@ export default function RootLayout({
   return (
     <html lang='en' className='!scroll-smooth'>
       <body className={cn(montserrat.className, 'overflow-x-hidden')}>
-        <ThemeProvider>
-          <Navbar />
+        <LoadingProvider>
+          <ThemeProvider>
+            <Navbar />
 
-          <div className='mt-[8vh] md:mt-[12vh] mb-[8vh]'>{children}</div>
+            <div className='mt-[8vh] md:mt-[12vh] mb-[8vh]'>{children}</div>
 
-          <Footer />
+            <Footer />
 
-          <ThemeButton />
-        </ThemeProvider>
+            <ThemeButton />
+
+            <DNALoader />
+          </ThemeProvider>
+        </LoadingProvider>
       </body>
     </html>
   )

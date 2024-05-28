@@ -13,6 +13,11 @@ export type ThemeContextType = {
   toggleTheme: () => void
 } | null
 
+export type LoadingContextType = {
+  loading: boolean
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>
+}
+
 export type SelectedWeProvideMenuType = 0 | 1 | 2
 
 export type JrCollegeBatchInfo = JrCollegeBatchProps
