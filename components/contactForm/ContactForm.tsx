@@ -22,6 +22,7 @@ import { Bounce, ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { useTheme } from '@/context/ThemeProvider'
 import { useLoading } from '@/context/LoadingProvider'
+import { useRef } from 'react'
 
 const formSchema = z.object({
   fname: z.string().min(2, {
@@ -39,6 +40,7 @@ const formSchema = z.object({
 const ContactForm = () => {
   const { theme } = useTheme()
   const { setLoading } = useLoading()
+  const formRef = useRef<HTMLFormElement>(null)
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -72,6 +74,9 @@ const ContactForm = () => {
 
       if (parsedResponse.success) {
         toast.success('Message sent successfully.', {})
+        if (formRef.current) {
+          formRef.current?.reset()
+        }
       } else {
         toast.success('Failed to send message.', {})
       }
@@ -96,6 +101,7 @@ const ContactForm = () => {
           <form
             onSubmit={form.handleSubmit(onSubmit)}
             className='flex flex-col space-y-5'
+            ref={formRef}
           >
             <div className='flex items-center justify-between space-x-5'>
               <FormField

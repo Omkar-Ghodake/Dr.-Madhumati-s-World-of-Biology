@@ -11,7 +11,7 @@ const DNALoader = () => {
     <>
       {loading && (
         <div className='fixed flex flex-col justify-center items-center inset-0 h-screen w-screen cursor-progress overflow-hidden blur-bg'>
-          <div className='relative w-[80vw] h-[60vh] md:w-[30vw] md:h-[70vh] rotate-90'>
+          <div className='relative w-[50vw] h-[30vh] md:w-[30vw] md:h-[70vh] rotate-90'>
             <Image src={'/DNALoader.gif'} alt='Loading...' fill />
           </div>
           <span className='text-2xl text-center font-semibold'>
