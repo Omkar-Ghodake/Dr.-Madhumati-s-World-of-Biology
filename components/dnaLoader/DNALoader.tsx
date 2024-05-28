@@ -10,10 +10,13 @@ const DNALoader = () => {
   return (
     <>
       {loading && (
-        <div className='fixed flex justify-center items-center inset-0 h-screen w-screen cursor-progress overflow-hidden blur-bg'>
-          <div className='relative w-[30vw] h-[70vh] rotate-90'>
+        <div className='fixed flex flex-col justify-center items-center inset-0 h-screen w-screen cursor-progress overflow-hidden blur-bg'>
+          <div className='relative w-[80vw] h-[60vh] md:w-[30vw] md:h-[70vh] rotate-90'>
             <Image src={'/DNALoader.gif'} alt='Loading...' fill />
           </div>
+          <span className='text-2xl text-center font-semibold'>
+            Please wait. Your response is being sent.
+          </span>
         </div>
       )}
     </>
