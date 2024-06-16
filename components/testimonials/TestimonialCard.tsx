@@ -1,23 +1,15 @@
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { limitText } from '@/lib/utils'
 import Image from 'next/image'
 import React from 'react'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog'
+import studentReading from '@/public/icons/student-reading.png'
 
 const TestimonialCard = ({
-  imgUrl,
   name,
   review,
   testimonialModalOpen,
   setTestimonialModalOpen,
 }: {
-  imgUrl: string
   name: string
   review: string
   testimonialModalOpen: boolean
@@ -28,7 +20,13 @@ const TestimonialCard = ({
       <div className='relative border p-5 w-full h-[60vh] md:h-full 2xl:h-[54vh] flex flex-col items-center justify-start shadow-lg rounded-2xl bg-secondary text-ellipsis'>
         <div className='absolute -top-12 w-24 h-24'>
           <div className='relative card-img w-full h-full'>
-            <Image src={imgUrl} alt='' fill className='' />
+            <Image
+              src={studentReading}
+              alt=''
+              fill
+              className='select-none rounded-full'
+              placeholder='blur'
+            />
           </div>
         </div>
 
@@ -64,7 +62,13 @@ const TestimonialCard = ({
       >
         <div className='md:p-5 w-full h-[80vh] flex flex-col items-center justify-start'>
           <div className='relative card-img w-40 h-40'>
-            <Image src={imgUrl} alt='' fill className='select-none' />
+            <Image
+              src={studentReading}
+              alt=''
+              fill
+              className='select-none'
+              placeholder='blur'
+            />
           </div>
 
           <div className='card-title font-semibold text-2xl'>{name}</div>
