@@ -1,6 +1,8 @@
 import { Separator } from "@radix-ui/react-separator";
 import React from "react";
 
+//temp text
+
 const DirectorInfo = ({
   title,
   desc,
